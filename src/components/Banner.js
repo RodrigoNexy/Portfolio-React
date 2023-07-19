@@ -1,13 +1,14 @@
 import React from 'react';
 
 import Image from '../assets/avatar.png';
-import {FaGithub, FaLinkedinIn, FaInstagram, FaMailBulk} from 'react-icons/fa';
+import {FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp} from 'react-icons/fa';
 // type  animation
 import {TypeAnimation} from 'react-type-animation'
 //motion
 import {motion} from 'framer-motion'
 // variaveis
 import {fadeIn} from '../variants'
+import {Link} from 'react-scroll'
 const Banner = () => {
   return <section id='home' className='min-h-[85vh] lg:min-h-[78vh] flex items-center'>
     <div className='container mx-auto'>
@@ -48,8 +49,20 @@ const Banner = () => {
           initial="hidden" 
           whileInView={'show'}
            viewport={{once: false, amount: 0.7}} className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-            <button className='btn btn-lg'>Entre em Contato</button>
-            <a href='#' className='text-gradient btn-link'>Meu Portfólio</a>
+            <Link to=''
+      activeClass='active'
+      smooth={true}
+      spy={true}
+      offset={-200}>
+        <button className='btn btn-lg'>Entre em Contato</button>
+      </Link>
+            <Link to='work'
+      activeClass='active'
+      smooth={true}
+      spy={true}
+      offset={-200}>
+        <button className='text-gradient btn-link'>Meu Portfólio</button>
+      </Link>
           </motion.div>
           {/* Redes sociais */}
           <motion.div
@@ -58,17 +71,17 @@ const Banner = () => {
           whileInView={'show'}
            viewport={{once: false, amount: 0.7}} className='flex text-[20px] gap-x-6 max-w-max mx-auto
           lg:mx-0'>
-            <a href='#'>
+            <a href='https://github.com/RodrigoNexy' target="_blank">
               <FaGithub />
             </a>
-            <a href='#'>
+            <a href='https://www.linkedin.com/in/rodrigo-carvalho-a30b14209/' target="_blank">
               <FaLinkedinIn />
             </a>
-            <a href='#'>
+            <a href='https://www.instagram.com/rodrigo.gmk4/' target="_blank">
               <FaInstagram />
             </a>
-            <a href='#'>
-              <FaMailBulk />
+            <a href='https://wa.link/v797a6' target="_blank">
+              <FaWhatsapp />
             </a>
           </motion.div>
         </div>
