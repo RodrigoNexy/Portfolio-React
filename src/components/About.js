@@ -42,7 +42,7 @@ const About = () => {
               <div className='text-[40px] font-tertiary text-gradient mb-2'>
                 {
                   inView ?
-                  <CountUp start={0} end={12} duration={5} /> : null }
+                  <CountUp start={0} end={32} duration={5} /> : null }
               </div>
               <div className='font-primary text-sm tracking-[2px]'>Meses de <br />Estudos</div>
             </div>
